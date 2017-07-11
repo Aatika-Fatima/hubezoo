@@ -18,5 +18,11 @@ public class WelcomeController {
 		model.put("message", this.message);
 		return "index";
 	}
+	
+	@RequestMapping("/login")
+	public String login()
+	{
+		return "reglogin";
+	}
 
 }
