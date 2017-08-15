@@ -52,7 +52,7 @@ public class SocialConfig {
 	@Scope(value = "request", proxyMode = ScopedProxyMode.INTERFACES)
 	public Facebook facebookTemplate(ConnectionRepository connectionRepository) {
 		Connection<Facebook> facebookConnection = connectionRepository.findPrimaryConnection(Facebook.class);
-		return facebookConnection != null ? facebookConnection.getApi() : null;
+ 		return facebookConnection != null ? facebookConnection.getApi() : null;
 	}
 
 	/*

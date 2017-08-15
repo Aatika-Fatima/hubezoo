@@ -18,7 +18,7 @@ import com.fomo.exception.ResourceNotFoundException;
 import com.fomo.model.Interest;
 
 @Controller
-@RequestMapping("/interests")
+@RequestMapping("/rest/v1/interests")
 public class InterestController {
 	@Autowired
 	public InterestRepostiory interestRepository;

@@ -89,7 +89,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 				.failureUrl("/signin?param.error=bad_credentials").and().logout().logoutUrl("/signout")
 				.deleteCookies("JSESSIONID").and().authorizeRequests()
 				.antMatchers("/admin/**", "/favicon.ico", "/resources/**", "/auth/**", "/signin/**", "/signup/**",
-						"/disconnect/facebook","/polls/**","/api/api-docs/**", "/api-docs/**")
+						"/disconnect/facebook","/polls/**","/api/api-docs/**", "/api-docs/**", "/rest/v1/**")
 				.permitAll().antMatchers("/**").authenticated().and().rememberMe().and()
 				.apply(new SpringSocialConfigurer());
 	}

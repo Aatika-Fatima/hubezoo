@@ -54,7 +54,8 @@ public class FacebookProfileController {
 
 	@RequestMapping(value = "/facebook/profile", method = RequestMethod.GET)
 	public ModelAndView getProfile() {
-		User profile = facebook.userOperations().getUserProfile();
+		
+ 		User profile = facebook.userOperations().getUserProfile();
 		ModelAndView mv = new ModelAndView();
 		mv.setViewName("facebook/profile");
 		mv.addObject("profile", profile);
